@@ -1,4 +1,4 @@
-# NIKI
+# Kiwi
 
 Local wiki utilizing markdown
 
