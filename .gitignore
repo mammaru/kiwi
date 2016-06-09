@@ -1,0 +1,10 @@
+# directories
+node_modules/
+bower_components/
+release/
+comp/
+dist/
+
+# files
+.DS_Store
+*.acar

@@ -1,0 +1,134 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    
+    #contents-list {
+      position: fixed;
+      z-index: 1;
+      float: left;
+      height: 100%;
+      width: 200px;
+    }
+
+    #container {
+      //overflow: hidden;
+      position: relative;
+      z-index: 1;
+      //float: right;
+      top: 0px;
+      left: 200px;
+      height: 100%;
+      width: 100%;
+      transition: all .5s ease;
+
+      .contents-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        #edit-area {
+          position: absolute;
+          float: left;
+          height: 100%;
+          width: 50%;
+          opacity: 1;
+          textarea {
+            height: 100%;
+          }
+          .input-area {
+            box-sizing: border-box;
+            overflow-y: hidden;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 110%;
+            border-right: 1px solid #ccc;
+          }
+          //.input-area > *,
+          //.preview-area > * {
+           //margin-top: 0;
+          //}         
+        }
+        #article {
+          position: relative;
+          z-index: 3;
+          float: left;
+          height: 100%;
+          width: 100%;
+          transition: all .5s ease;
+        }
+        
+        #article.side {
+          transform: translateX(50%);
+        }
+        
+        #article-col {
+          position: relative;
+          overflow-y: auto;
+          top: 0px;
+          right: 100px;
+          left: 0px;
+          //width: 100%;
+          height: 100%;
+          padding: 50px;
+          color: #333;
+          background-color: #fff;
+
+        }
+        #toc-col {
+          position: relative;
+          top: 0px;
+          right: 0px;
+          width: 300px;
+          height: 100%;
+          padding: 50px;
+          //color: #333;
+          //background-color: #fff;
+          #table-of-contents {
+            //position: relative;
+            //top: 0px;
+            //right: 0px;
+            width: 100%;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+            .toc-table {
+              background-color: #ffffff;
+              width: 100px;
+              height: 40px;
+              .toc-row {
+                background-color: #ffffff;
+                &:hover {
+                  background-color: #e5e5e5;
+                }
+              }
+              .inner-toc-table {
+                width: 100%;
+                height: 100%;
+                .inner-toc-row {
+                  padding-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container.full-screen {
+      transform: translateX(-200px);
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "niki",
+  "description": "",
+  "authors": [
+    "mammaru"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
